@@ -47,24 +47,25 @@ def main():
     if answer == "no":
         print("Okay, maybe next time!")
     return  # Stops the program
-
-# Loop continues as long as the user says "yes"
-while answer == "yes":
+    
+    while answer == "yes":
         print("Great, let's play!")
 
 # Ask the user which topic they want
-topic_choice = ask_for_topic(topics)
+    topic_choice = ask_for_topic(topics)
 
 # Check if the topic is valid (exists in the list)
-if topic_choice in topics:
+    if topic_choice in topics:
      tell_joke(topic_choice)  # Call the joke function
-else:
+    else:
       print("Sorry, I don't know that topic.")
 # Ask if they want another joke or if they are finished
-answer = input("Do you want to hear another joke or are you finished? ")
+    answer = input("Do you want to hear another joke or are you finished? ")
 
  # If the user says they are finished, ask for feedback
-if answer == "finished":
-    rating = int(input("Please rate our game 1/10: "))  # Convert rating to a number
-    score = rating * 10  # Turn rating into a percentage
-    print("Your satisfaction rate is " + str(score) + "%")
+    if answer == "finished":
+        rating = int(input("Please rate our game 1/10: "))  # Convert rating to a number
+        score = rating * 10  # Turn rating into a percentage
+        print("Your satisfaction rate is " + str(score) + "%")
+
+main()
